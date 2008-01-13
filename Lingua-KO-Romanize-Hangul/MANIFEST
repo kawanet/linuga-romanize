@@ -1,7 +1,0 @@
-Makefile.PL
-lib/Lingua/KO/Romanize/Hangul.pm
-README
-MANIFEST
-META.yml
-t/hangul.t
-Changes
