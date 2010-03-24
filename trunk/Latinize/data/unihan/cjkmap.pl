@@ -6,8 +6,9 @@ use utf8;
 binmode STDOUT, ":utf8";
 binmode STDERR, ":utf8";
 
-require "jamap.pl";
 require "zhmap.pl";
+require "jamap.pl";
+require "komap.pl";
 main(@ARGV);
 
 sub main {
@@ -44,4 +45,10 @@ sub tokyo {
 	my $data = {};
 	$data->{variant} = jamap::japanese_variant();
 	zhutil::save_amf( $data, 'tokyo.amf' );
+}
+
+sub seoul {
+	my $data = {};
+	$data->{read} = komap::korean_hangul();
+	zhutil::save_amf( $data, 'seoul.amf' );
 }
