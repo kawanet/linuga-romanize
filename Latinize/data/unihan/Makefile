@@ -9,6 +9,11 @@ trad2jnew_csv = trad2jnew.csv
 
 all: $(zh_amf) $(ja_amf) $(ko_amf)
 
+install: all
+	/bin/cp -f $(zh_amf) ../../demo/ZH/
+	/bin/cp -f $(ja_amf) ../../demo/JA/
+	/bin/cp -f $(ko_amf) ../../demo/KO/
+
 clean:
 	/bin/rm -f $(zh_amf) $(ja_amf) $(ko_amf) Unihan.zip $(unihan_files)
 
