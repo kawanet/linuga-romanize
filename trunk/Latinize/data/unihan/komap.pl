@@ -17,7 +17,6 @@ sub korean_hangul {
 		my $dst = lc( $kohangul->{$src} );
 		$dst =~ s/\s+/\//g;
 		$map->{$src} = $dst;
-		print STDERR "[$src] [$dst]\n";
 	}
 	my $keynum = scalar keys %$map;
 	print STDERR "korean_hangul: ", $keynum, " keys.\n";
